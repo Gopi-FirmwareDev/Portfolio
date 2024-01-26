@@ -9,7 +9,6 @@ app.secret_key = 'your_secret_key'  # Replace with your actual secret key
 # Sample user database (replace with your actual database connection)
 user_database = {
     'Gopi': {'password': '12345', 'secret_key': 'A7FT4VIKVJDH2CMZT2UXERESKG44V5OR'},
-    'Nishanth': {'password': '67890', 'secret_key': 'FJA26ZXGVFXXXSO6PPMY7HCEN2IWFQLB'},
     # Add more users as needed
 }
 
