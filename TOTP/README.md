@@ -28,25 +28,15 @@ TOTP, or Time-based One-Time Password, is a widely used method for implementing 
 Make sure you have the following installed:
 - Python (version 3.x)
 - Flask
-
-### Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/TOTP.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd TOTP
-    ```
-3. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
+- pyotp
+- qrcode
+- io
+  
 ### Usage
 #### Login
-1. Access the login page by navigating to http://127.0.0.1:5000/login in your web browser.
-2. Enter your username and password to log in.
+1. Run the code.
+2. Access the login page by navigating to http://127.0.0.1:5000/login in your web browser.
+3. Enter the provided username and password to log in; for example, the code uses Username: Gopi, Password: 12345.
 
 #### TOTP Verification
 - After login, you will be redirected to the TOTP verification page.
