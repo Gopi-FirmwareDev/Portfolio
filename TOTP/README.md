@@ -11,7 +11,6 @@ This project implements a TOTP generator, providing a secure way to enable two-f
   - [Usage](#usage)
     - [Login](#login)
     - [TOTP Verification](#totp-verification)
-    - [QR Code](#qr-code)
 - [Contributing](#contributing)
 - [License](#license)
 
