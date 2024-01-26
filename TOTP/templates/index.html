@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP QR Code Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #totpForm {
+            margin-top: 20px;
+        }
+
+        #totpForm label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #totpForm input {
+            padding: 8px;
+        }
+
+        #totpForm button {
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #totpForm button:hover {
+            background-color: #45a049;
+        }
+
+        #qrCodeContainer {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #qrCodeImage {
+            max-width: 100%;
+        }
+
+        #showQrCodeLink {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .flash-messages {
+            list-style: none;
+            padding: 0;
+        }
+                /* Styles for success flash messages */
+                .flash-success {
+            color: green;
+        }
+
+        /* Styles for error flash messages */
+        .flash-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <h2>Enter the TOTP</h2>
+    
+    <!-- Form to enter TOTP -->
+    <form id="totpForm" method="post" action="{{ url_for('verify_totp') }}">
+        <label for="totp">TOTP:</label>
+        <input type="text" id="totp" name="totp" required>
+        <button type="submit">Submit TOTP</button>
+    </form>
+
+    <!-- Display the QR code -->
+    <div id="qrCodeContainer" style="display: none;">
+        <h2>Scan the QR code to access the TOTP</h2>
+        <img id="qrCodeImage" src="" alt="QR Code">
+    </div>
+
+    <!-- Link to display QR code after login -->
+    <a href="#" id="showQrCodeLink" onclick="showQrCode()">Lost TOTP access?</a>
+
+    <!-- Include JavaScript to handle displaying the QR code -->
+    <script>
+        function showQrCode() {
+            // Replace 'http://127.0.0.1:5000/qr_code' with the actual URL endpoint for fetching the QR code
+            var qrCodeUrl = 'http://127.0.0.1:5000/qr_code';
+
+            // Set the QR code image source
+            document.getElementById('qrCodeImage').src = qrCodeUrl;
+
+            // Show both the QR code container and the TOTP form
+            document.getElementById('qrCodeContainer').style.display = 'block';
+            document.getElementById('totpForm').style.display = 'block';
+
+            // Hide the 'Show QR Code' link
+            document.getElementById('showQrCodeLink').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
