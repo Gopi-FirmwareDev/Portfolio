@@ -27,7 +27,9 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol t
 Make sure you have the following installed:
 - Python (version 3.x)
 - Paho MQTT client library
+- MQTT broker running on PC
 
 ### Installation
+1. Install the Paho MQTT client library:
 ```bash
 pip install paho-mqtt
