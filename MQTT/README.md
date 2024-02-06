@@ -33,3 +33,9 @@ Make sure you have the following installed:
 1. Install the Paho MQTT client library:
 ```bash
 pip install paho-mqtt
+
+## Contributing
+Contributions are welcome! If you have any suggestions, improvements, or issues, feel free to open an issue or create a pull request.
+
+## License
+This project is licensed under the MIT License.
