@@ -9,8 +9,6 @@ This project implements an MQTT communication system, enabling efficient and rel
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Publishing Messages](#publishing-messages)
-    - [Subscribing to Topics](#subscribing-to-topics)
 - [Contributing](#contributing)
 - [License](#license)
 
