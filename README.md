@@ -8,7 +8,7 @@ Hello! 👋 I'm Gopinath C, a passionate Firmware Engineer based in Bangalore, I
 
 - 😊 Pronouns: He/Him
 - 🌐 Portfolio Website:[ [Your Portfolio Website URL] ](https://github.com/Gopi-FirmwareDev/Portfolio/)
-- 📧 Email: cgngopi143@gmail.com
+- 📧 Email: gopinath.c1001@gmail.com
 - 📚 [LinkedIn](www.linkedin.com/in/gopinath-c-45463818a/)
 
 ## Projects
